@@ -1,0 +1,13 @@
+<div class="container">
+	<div 
+		class="alert" 
+		[ngClass]="{'alert-success' : won, 'alert-danger' : !won}">
+		<h6 *ngIf="won">
+			You won! Wanna play again?
+		</h6>
+		<h6 *ngIf="!won">
+			You lost :( <br> The word was: {{ word }}.<br> Wanna play again?
+		</h6>
+		<button class="btn btn-primary" (click)="emitPlayAgain()">Play again</button>
+	</div>
+</div>
